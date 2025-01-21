@@ -1,0 +1,39 @@
+.blur-load {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.blur-load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+.blur-load > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.blur-load.loaded::before {
+  display: none;
+}
+.blur-load.loaded > img {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

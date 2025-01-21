@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+src/my-images/minified/
+src/my-images/image-data.yaml

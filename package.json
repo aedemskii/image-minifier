@@ -1,0 +1,28 @@
+{
+  "name": "try-webfont",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gulp": "^5.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "js-yaml": "^4.1.0",
+    "path": "^0.12.7",
+    "sharp": "^0.33.5"
+  },
+  "scripts": {
+    "prepare-styles": "yarn sass src/style.scss src/style.css",
+    "minify-images": "gulp minify-images",
+    "set-minified": "gulp set-minified",
+    "minify-and-set": "gulp minify-images && gulp set-minified"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/register": "^7.25.9",
+    "del": "^8.0.0",
+    "sass": "^1.83.4",
+    "serve": "^14.2.4"
+  }
+}
